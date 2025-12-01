@@ -394,7 +394,7 @@ export const GhostVaultApp: FC = () => {
       }
   };
 
-  // ---  NO TRANSACTION FOR STEP 1 ---
+  // --- : NO TRANSACTION FOR STEP 1 ---
   const initProtocol = async () => { 
       // Pure frontend state transition for smoother demo
       setProcessStatus("Initializing..."); 
