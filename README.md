@@ -75,11 +75,17 @@ Offchain: The frontend uses AES-256 with a client-side viewing key to decrypt an
 ShadowEngine is a robust architectural prototype. Here is the breakdown of what is live onchain vs. what is simulated for the hackathon:
 
 Solana Program: **REAL**	Deployed on Devnet. Enforces privacy rules and state.
+
 Oracle Logic: **REAL** The Ed25519 signature verification is enforced on-chain.
+
 Zcash Data: **REAL** We query live Zcash mainnet RPCs to validate deposits.
+
 Helius Feeds: **REAL** Live DAS, RPC, and Fee data streaming.
+
 Pump.fun Feed: **REAL**	Live WebSocket connection to PumpPortal.
+
 ZK Proofs: **Simulated**	The "Proof Generation" loading state is a UI simulation.
+
 Rebalancing: **Simulated**	Volatility is simulated locally to demonstrate rebalance mechanics.
 
 While this hackathon demo simulates the zero-knowledge proofs and market volatility to focus on the UX/Architecture, a Mainnet version would implement the following:
