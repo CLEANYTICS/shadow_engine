@@ -36,6 +36,7 @@ const PUMP_PORTAL_WSS = "wss://pumpportal.fun/api/data";
 const BASKET_OPTIONS = [
     { id: 'usdc', ticker: 'USDC', name: 'USD Coin', type: 'stable', desc: 'Liquid Stablecoin' },
     { id: 'vnxau', ticker: 'VNXAU', name: 'VNX Swiss Gold', type: 'rwa', desc: 'Tokenized Gold' },
+    { id: 'kalshix1', ticker: 'Kalshix1', name: 'Kalshi Events', type: 'prediction', desc: 'Tokenized Outcomes (Binary)' },
     { id: 'wbtc', ticker: 'wBTC', name: 'Wrapped Bitcoin', type: 'bluechip', desc: 'Store of Value' },
     { id: 'wzec', ticker: 'wZEC', name: 'Wrapped Zcash', type: 'privacy', desc: 'Shielded Asset' },
     { id: 'googx', ticker: 'GOOGX', name: 'Alphabet Inc.', type: 'stock', desc: 'Tokenized Equity' },
@@ -106,7 +107,7 @@ export const GhostVaultApp: FC = () => {
   
   // --- SNIPER & REBALANCE STATE ---
   const [allocations, setAllocations] = useState<{ [key: string]: number }>({
-      usdc: 0, wzec: 0, wbtc: 0, vnxau: 0, googx: 0, sniper_mode: 0
+      usdc: 0, wzec: 0, kalshix1: 0, wbtc: 0, vnxau: 0, googx: 0, sniper_mode: 0
   });
   const [snipedTokens, setSnipedTokens] = useState<SnipedToken[]>([]);
   const [isSniping, setIsSniping] = useState(false);
@@ -272,7 +273,7 @@ export const GhostVaultApp: FC = () => {
       isDemoReset.current = true; 
       localStorage.removeItem("ghostvault_assets"); 
       setStep(1); setPortfolioAssets([]); setSnipedTokens([]); setActivityLog([]); setIsVaultLocked(true); setDriftDetected(false); setShowSuccessModal(false); setZcashTxId(""); setZcashRealData(null);
-      setAllocations({ usdc: 0, wzec: 0, wbtc: 0, vnxau: 0, googx: 0, sniper_mode: 0 });
+      setAllocations({ usdc: 0, wzec: 0, kalshix1: 0, wbtc: 0, vnxau: 0, googx: 0, sniper_mode: 0 });
   };
   
   const handleWeightChange = (id: string, val: string) => { setAllocations(prev => ({ ...prev, [id]: parseInt(val) || 0 })); };
