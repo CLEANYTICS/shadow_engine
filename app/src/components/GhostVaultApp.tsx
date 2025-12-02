@@ -673,7 +673,7 @@ export const GhostVaultApp: FC = () => {
                 </div>
 
                 <div className="absolute bottom-10 text-[10px] text-gray-700 font-mono">
-                    Solana x <span className="text-green-500 animate-pulse">Zcash</span>
+                    Solana x <span className="text-orange-500 animate-pulse">Zcash</span>
                 </div>
             </div>
         ) : (
