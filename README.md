@@ -20,6 +20,16 @@ ShadowEngine uses three key Helius features to make the private ZEC↔Solana vau
 *   **The Bridge:** ShadowEngine implements a novel cross-chain privacy solution that bridges Zcash liquidity directly into Solana. Users prove a ZEC deposit off-chain, and an Oracle verifies it via **Solana Instruction Introspection** before allowing minting.
 
 ---
+### TL;DR
+Private Zcash deposits → encrypted Solana vault.
+
+Client-side viewing key = user-owned privacy.
+
+Ed25519 oracle + introspection = enforced privacy rules.
+
+Helius + pump.fun live data inside a shielded portfolio.
+
+
 
 ## Quick Start
 
