@@ -61,11 +61,13 @@ AouRAHF6Cm2oqCNiJcV2Gg4Vzwyy5UeA3jnFYS5jJm4W (Devnet)
 
 ### Architecture & Privacy Mechanics
 ShadowEngine uses a hybrid architecture to achieve privacy on a public chain:
+
 **1. The "Introspection" Bridge (Rust/Anchor)**
 I do not verify ZK-SNARKs directly on Solana. Instead, I use Instruction Introspection.
 The offchain Oracle verifies the Zcash transaction.
 The Oracle signs a message using Ed25519.
 The Solana program checks sysvar::instructions to ensure the Ed25519 Verify program was called successfully in the previous instruction before allowing a deposit.
+
 **2. Encrypted State (Frontend)**
 The specific asset breakdown (e.g., "50% BTC, 50% Memes") is never stored in plaintext on the blockchain.
 Onchain: Stores only Total Equity and an Encrypted Blob (string).
