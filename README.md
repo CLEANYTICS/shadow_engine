@@ -86,6 +86,8 @@ Helius Feeds: **REAL** Live DAS, RPC, and Fee data streaming.
 
 Pump.fun Feed: **REAL**	Live WebSocket connection to PumpPortal.
 
+Standard Assets: **Hardcoded** Devnet lacks real liquidity for these specific RWAs.
+
 ZK Proofs: **Simulated**	The "Proof Generation" loading state is a UI simulation.
 
 Rebalancing: **Simulated**	Volatility is simulated locally to demonstrate rebalance mechanics.
@@ -96,6 +98,7 @@ While this hackathon demo simulates the zero-knowledge proofs and market volatil
 *   **Client-Side ZK Proving:** Instead of the current UI simulation, we would implement **Halo2 or Groth16 (via WASM)** directly in the browser. The user would generate a valid proof of Zcash ownership locally, ensuring their keys never touch the internet.
 *   **On-Chain Verification:** The Solana program would be upgraded to verify these proofs on-chain (or via a decentralized Oracle network if Compute Unit limits are exceeded), replacing the current Ed25519 signature check.
 *   **Live Rebalancing:** Instead of simulated volatility, we would integrate **Pyth Oracles** for real-time price feeds and use **Jupiter CPI (Cross-Program Invocation)** to perform the actual asset swaps inside the vault when a rebalance is triggered.
+*   **Universal Asset Sourcing (Jupiter):** To fulfill the promise of buying "any asset" (Gold, BTC, Kalshi), the production vault will integrate **Jupiter Aggregator**. This gives the private vault instant access to the entire Solana liquidity layer, allowing users to trustlessly swap for any SPL token without relying on ShadowEngine to be the counterparty.
 
 ### Potential Features
 *   **Strategy Backtesting:** Allow users to simulate how their "Dark Pool" allocation (e.g., 50% Gold / 50% SOL) would have performed over the last year using historical Helius data.
