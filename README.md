@@ -96,7 +96,7 @@ While this hackathon demo simulates the zero-knowledge proofs and market volatil
 
 ### FUTURE: Transitioning to Production
 *   **Client-Side ZK Proving:** Instead of the current UI simulation, we would implement **Halo2 or Groth16 (via WASM)** directly in the browser. The user would generate a valid proof of Zcash ownership locally, ensuring their keys never touch the internet.
-*   **On-Chain Verification:** The Solana program would be upgraded to verify these proofs on-chain (or via a decentralized Oracle network if Compute Unit limits are exceeded), replacing the current Ed25519 signature check.
+*   **On-Chain Verification:** The Solana program would be upgraded to verify these proofs onchain (or via a decentralized Oracle network if Compute Unit limits are exceeded), replacing the current Ed25519 signature check.
 *   **Live Rebalancing:** Instead of simulated volatility, we would integrate **Pyth Oracles** for real-time price feeds and use **Jupiter CPI (Cross-Program Invocation)** to perform the actual asset swaps inside the vault when a rebalance is triggered.
 *    **Universal Asset Sourcing (Jupiter):** To buy public assets like Gold or BTC without revealing an individual user's strategy, the production version will use an **Omnibus (Communal) Vault** structure.
   
