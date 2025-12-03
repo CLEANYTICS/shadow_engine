@@ -78,7 +78,7 @@ ShadowEngine is a robust architectural prototype. Here is the breakdown of what 
 
 Solana Program: **REAL**	Deployed on Devnet. Enforces privacy rules and state.
 
-Oracle Logic: **REAL** The Ed25519 signature verification is enforced on-chain.
+Oracle Logic: **REAL** The Ed25519 signature verification is enforced onchain.
 
 Zcash Data: **REAL** We query live Zcash mainnet RPCs to validate deposits.
 
