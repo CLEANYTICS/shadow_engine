@@ -10,7 +10,7 @@ This project is submitted for the following tracks:
 ### Helius
 ShadowEngine uses three key Helius features to make the private ZEC↔Solana vault intuitive:
 1.  **Helius DAS:** Used to fetch assets, providing an "X-Ray" view into the user's vault. This displays complex, compressed portfolio data instantly.
-2.  **Parsed Transaction History:** Turns low-level program calls into a readable activity feed. This is vital because privacy features often make raw on-chain data hard to interpret.
+2.  **Parsed Transaction History:** Turns low-level program calls into a readable activity feed. This is vital because privacy features often make raw onchain data hard to interpret.
 3.  **Priority Fee API:** Displays live network load to ensure the UI feels responsive and transactions land during volatility.
 
 ### Pump.fun
@@ -96,7 +96,7 @@ While this hackathon demo simulates the zero-knowledge proofs and market volatil
 
 ### FUTURE: Transitioning to Production
 *   **Client-Side ZK Proving:** Instead of the current UI simulation, we would implement **Halo2 or Groth16 (via WASM)** directly in the browser. The user would generate a valid proof of Zcash ownership locally, ensuring their keys never touch the internet.
-*   **On-Chain Verification:** The Solana program would be upgraded to verify these proofs onchain (or via a decentralized Oracle network if Compute Unit limits are exceeded), replacing the current Ed25519 signature check.
+*   **Onchain Verification:** The Solana program would be upgraded to verify these proofs onchain (or via a decentralized Oracle network if Compute Unit limits are exceeded), replacing the current Ed25519 signature check.
 *   **Live Rebalancing:** Instead of simulated volatility, we would integrate **Pyth Oracles** for real-time price feeds and use **Jupiter CPI (Cross-Program Invocation)** to perform the actual asset swaps inside the vault when a rebalance is triggered.
 *    **Universal Asset Sourcing (Jupiter):** To buy public assets like Gold or BTC without revealing an individual user's strategy, the production version will use an **Omnibus (Communal) Vault** structure.
   
